@@ -10,16 +10,16 @@ We modified the existing [codes](https://github.com/NVlabs/GA3C) of hybrid CPU/G
 
 ## Results
 Comparison between models and reward systems:
-![Comparison between models and reward systems][plot1]
-[plot1]: https://github.com/Yizhi-Fang/IE598_RL/blob/master/plots_for_report/actor_reward_comparison.png "Comparison between models and reward systems"
+
+![plot1](https://github.com/Yizhi-Fang/IE598_RL/blob/master/plots_for_report/actor_reward_comparison.png)
 
 Comparison between hyper-parameters:
-![Comparison between hyper-parameters][plot2]
-[plot2]: https://github.com/Yizhi-Fang/IE598_RL/blob/master/plots_for_report/lambda_beta_comparison.png "Comparison between hyper-parameters"
+
+![plot2](https://github.com/Yizhi-Fang/IE598_RL/blob/master/plots_for_report/lambda_beta_comparison.png)
 
 Comparison between number of hidden units:
-![Comparison between number of hidden units][plot3]
-[plot3]: https://github.com/Yizhi-Fang/IE598_RL/blob/master/plots_for_report/neurons_comparison.png "Comparison between number of hidden units"
+
+![plot3](https://github.com/Yizhi-Fang/IE598_RL/blob/master/plots_for_report/neurons_comparison.png)
 
 ## Future work - Gathering (discrete action space)
 We could expand our work for competitive and discrete environment such as Gathering. See more details in branch [gathering](https://github.com/osipychev/IE598_RL/tree/gathering).
