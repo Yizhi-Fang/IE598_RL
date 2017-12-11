@@ -9,17 +9,17 @@ We modified the reward system to take considerations when 2 agent were receiving
 We modified the existing [codes](https://github.com/NVlabs/GA3C) of hybrid CPU/GPU version of the A3C algorithm and adapted it to multi-agent decentralized actor and centralized critic approach according this [paper](https://arxiv.org/pdf/1706.02275.pdf).
 
 ## Results
-![alt text][plot1]
+Comparison between models and reward systems:
 
-[plot1]: https://github.com/Yizhi-Fang/IE598_RL/blob/master/plots_for_report/actor_reward_comparison.pdf "Comparison between models and reward systems"
+[[plots_for_report/actor_reward_comparison.pdf]]
 
-![alt text][plot2]
+Comparison between hyper-parameters:
 
-[plot2]: https://github.com/Yizhi-Fang/IE598_RL/blob/master/plots_for_report/lambda_beta_comparison.pdf "Comparison between hyper-parameters"
+[[plots_for_report/lambda_beta_comparison.pdf]]
 
-![alt text][plot2]
+Comparison between number of hidden units:
 
-[plot2]: https://github.com/Yizhi-Fang/IE598_RL/blob/master/plots_for_report/neurons_comparison.pdf "Comparison between number of hidden units"
+[[plots_for_report/neurons_comparison.pdf]]
 
 ## Future work - Gathering (discrete action space)
 We could expand our work for competitive and discrete environment such as Gathering. See more details in branch [gathering](https://github.com/osipychev/IE598_RL/tree/gathering).
