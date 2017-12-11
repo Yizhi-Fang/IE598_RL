@@ -1,22 +1,25 @@
 # Multi-Agent Reinforcement Learning project (MARL)
 
-## Lunar Lander (continuous action space)
-See details in folder [lunarlander_continuous](https://github.com/osipychev/IE598_RL/tree/master/lunarlander_continuous).
-
-## Gathering (discrete action space)
-See details in branch [gathering](https://github.com/osipychev/IE598_RL/tree/gathering).
-
 ## MARL Lunar Lander environment
-I added GYM folder that is a clone of the original GYM with some modification.
-The simplest way to make it working, just put https://github.com/osipychev/IE598_RL/tree/master/gym/gym
-into your working folder like "workdir/gym/env".
-The other way is to install gym from that repo (into a separate conda environment).
-If installation to a separate conda env or virtual machine is impossible, the changes can be done to the original GYM installed to the system.
-For that, you need to find the location of GYM that you run from and copy the swap ENV folder.
+The original GYM environment was modified for 2 Lunar landers (continuous). The trick is how to evaluate the reward between 2 agents. The previous one was simply adding 2 rewards; however this yields higher payout such that the model was stuck in a local minimum.
 
-## Things that we've tried so far
-1. We have modified the original lunar lander environment in GYM to be able to take 2 agents such that we could use it as multi-agent environment for continuous action space. The environment has been tested to be working fine.
-2. Unfortunately, we haven't successfully trained the environment with any of the following three models. The training process wourld start but the RScores wouldn't increase and sometimes froze after some certain episodes:
-   * Simple modified policy gradient codes given by Professor to train multiple agents.
-   * Original homework 7 codes with doubled action and oberservation spaces.
-   * Modified homework 7 codes such that the each agent has its own observations, policy and actions but share the same critic.
+We modified the reward system to take considerations when 2 agent were receiving 2 scores (1 big positive and 1 small negative): in new reward system this will be forced to be 0 while in old system this was positive.
+
+## Our model
+We modified the existing [codes](https://github.com/NVlabs/GA3C) of hybrid CPU/GPU version of the A3C algorithm and adapted it to multi-agent decentralized actor and centralized critic approach according this [paper](https://arxiv.org/pdf/1706.02275.pdf).
+
+## Results
+![alt text][plot1]
+
+[plot1]: https://github.com/Yizhi-Fang/IE598_RL/blob/master/plots_for_report/actor_reward_comparison.pdf "Comparison between models and reward systems"
+
+![alt text][plot2]
+
+[plot2]: https://github.com/Yizhi-Fang/IE598_RL/blob/master/plots_for_report/lambda_beta_comparison.pdf "Comparison between hyper-parameters"
+
+![alt text][plot2]
+
+[plot2]: https://github.com/Yizhi-Fang/IE598_RL/blob/master/plots_for_report/neurons_comparison.pdf "Comparison between number of hidden units"
+
+## Future work - Gathering (discrete action space)
+We could expand our work for competitive and discrete environment such as Gathering. See more details in branch [gathering](https://github.com/osipychev/IE598_RL/tree/gathering).
